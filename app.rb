@@ -1,8 +1,14 @@
 require 'sinatra/base'
 
 class Chitter < Sinatra::Base
+
   get '/' do
-    'This is my first cweet!'
+    redirect '/chitter'
+  end
+
+  get '/chitter' do
+   @cweets = ['This is my first cweet!']
+   erb :'chitter/index'
   end
 
   run! if app_file == $0
