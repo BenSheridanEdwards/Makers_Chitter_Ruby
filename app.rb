@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/peeps.rb'
 
 class Chitter < Sinatra::Base
 
@@ -7,7 +8,6 @@ class Chitter < Sinatra::Base
   end
 
   get '/chitter' do
-   @peeps = ['This is my first peeps!']
    erb :'chitter/index'
   end
 
