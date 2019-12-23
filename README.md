@@ -29,6 +29,24 @@ $ gem install bundle
 $ bundle
 ```
 
+### To set up the database
+
+Connect to `psql` and create the `Chitter` database:
+
+```
+CREATE DATABASE "Chitter";
+```
+
+To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+
+### To run the Bookmark Manager app:	### To run the Bookmark Manager app:
+
+```	```
+rackup -p 4567
+```	```
+
+
+To view bookmarks, navigate to `localhost:3000/chitter`.
 
 
 ## <a name="Feature_Tests">Feature Tests (How it works)</a>
