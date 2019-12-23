@@ -20,8 +20,8 @@ We are going to write a small Twitter clone that will allow the users to post me
 Clone the repository from github then change directory into it.
 
 ```
-$ git clone git@github.com:BenSheridanEdwards/Boris_Bikes.git
-$ cd Boris_Bikes
+$ git clone git@github.com:BenSheridanEdwards/Makers_Chitter_Ruby.git
+$ cd Makers_Chitter_Ruby
 ```
 Load dependencies with bundle.
 ```
