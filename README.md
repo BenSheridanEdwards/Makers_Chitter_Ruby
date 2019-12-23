@@ -31,13 +31,14 @@ $ bundle
 
 ### To set up the database
 
-Connect to `psql` and create the `Chitter` database:
+Connect to `psql` and create the `Chitter` and `Chitter_test` databases:
 
 ```
 CREATE DATABASE "Chitter";
+CREATE DATABASE "Chitter_test";
 ```
 
-To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
+To set up the appropriate tables, connect to each database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
 
 ### To run the Bookmark Manager app:	### To run the Bookmark Manager app:
 
