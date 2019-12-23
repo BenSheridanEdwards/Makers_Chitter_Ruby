@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class Chitter < Sinatra::Base
   get '/' do
-    'Hello World'
+    'This is my first cweet!'
   end
 
   run! if app_file == $0
