@@ -1,11 +1,11 @@
 require 'pg'
 
-class Database
+class DatabaseLink
   def self.connect(dbname)
     @@connection = PG.connect(dbname: dbname)
   end
 
-  def self.exec(sql)
-    @@connection.exec(sql)
+  def self.exec(query)
+    @@connection.exec(query)
   end
 end

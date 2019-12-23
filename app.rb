@@ -1,8 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/flash'
-require './lib/peeps.rb'
-require './lib/users.rb'
-require './database_connection_setup'
+require './lib/peep.rb'
+require './lib/user.rb'
+require './database_link_setup'
 
 class Chitter < Sinatra::Base
   enable :sessions, :method_override
