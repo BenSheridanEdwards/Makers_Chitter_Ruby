@@ -1,7 +1,6 @@
 require 'pg'
 
 class Peep
-
   attr_reader :id, :content, :time, :maker_id
 
   def initialize(id:, content:, time:, maker_id:)
@@ -12,21 +11,20 @@ class Peep
   end
 
   def self.all
-    peeps = Database.exec("SELECT * FROM peeps;")
-    peeps.map do |peep|
+    result = DatabaseConnection.query("SELECT * FROM peeps;")
+    result.map do |peep|
       Peep.new(id: peep['id'],
-               user_id: peep['user_id'],
                content: peep['content'],
-               time: peep['time']
+               time: peep['time'],
+               maker_id: peep['maker_id']
                )
     end
   end
 
-  def self.create(content:, user_id:)
-    result = Database.exec("INSERT INTO peeps (content, time, maker_id)
-           VALUES ('#{content}', '#{Time.now}', '#{maker_id}')
-           RETURNING id, content, time, maker_id;")
-
+  def self.create(content:, maker_id:) 
+    result = DatabaseConnection.query("INSERT INTO peeps (content, time, maker_id)
+    VALUES ('#{content}', '#{Time.now}', '#{maker_id}')
+    RETURNING id, content, time, maker_id;")
     Peep.new(id: result[0]['id'],
              content: result[0]['content'],
              time: result[0]['time'],

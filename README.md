@@ -34,8 +34,8 @@ $ bundle
 Connect to `psql` and create the `Chitter` and `Chitter_test` databases:
 
 ```
-CREATE DATABASE "Chitter";
-CREATE DATABASE "Chitter_test";
+CREATE DATABASE "chitter";
+CREATE DATABASE "chitter_test";
 ```
 
 To set up the appropriate tables, connect to each database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
@@ -47,7 +47,7 @@ rackup -p 4567
 ```	```
 
 
-To view bookmarks, navigate to `localhost:3000/chitter`.
+To view bookmarks, navigate to `localhost:4567/`.
 
 
 ## <a name="Feature_Tests">Feature Tests (How it works)</a>
